@@ -1,0 +1,489 @@
+
+*{
+	margin: 0;
+	padding: 0;
+   font-family: 'Raleway', sans-serif; 
+}
+
+/* .....general css... */
+html,body{
+	height: 100%;
+}
+body{
+	color: #212226;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Raleway', sans-serif;
+}
+p{
+	font-family: 'Lato', sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 24px;
+}
+section{
+	background:#fff;
+	overflow: hidden;
+}
+/* ....preloader... */
+#preloader{
+	background-color:#fff;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+}
+
+#status{
+	background-image: url("../img/preloader/Ellipsis-1s-200px.gif");
+	background-repeat: no-repeat;
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+
+}
+
+/* nav */
+.nav-link:hover{
+	background-color: rgb(157, 34, 34);
+	color: #fff;
+	padding: 6px 12px;
+	border-radius: 15px 0 15px 0;
+	transition: 0.5s linear;
+
+}
+
+.navbar-brand{
+	color: #fff;
+	
+	
+} 
+.brand-bg{
+    background-color: black;
+    padding-top: -21px;
+    margin-left: -21px;
+    margin-left: 0.5rem;
+   padding: 0px 30px;
+}
+
+.navbar-brand{
+	animation: moveInLeft 1s ease-in;
+}
+.my-nav-bg{
+	background-color:rgb(22, 22, 132);
+	color: #fff;
+}
+
+ul li a{
+	color: #fff;
+}
+
+.number {
+	padding-right: 2rem;
+}
+.fa-mobile{
+	padding-right: 0.4rem;
+}
+.mybutton{
+	background-color: #fff;
+	color: #000;
+	margin-right: 2rem;
+}
+
+/* nav ends */
+
+/* ....home... */
+#home{
+	background: none;
+	height: 100%;
+	position: relative;
+}
+#home-bg{
+	position: fixed;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	top: 50%;
+	left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background-image: url(../img/about/about-blank.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+#home-overlay{
+	background-color: rgba(0, 0, 0, 0.8);
+	width:100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index:-1;
+}
+
+.name{
+	font-family: 'Lobster', cursive;
+	color:yellow;
+	font-weight: 50;
+}
+#home-content{
+	width: 100%;
+	height: 100%;
+	display: table;
+	backface-visibility: hidden;
+
+
+}
+#home-content-inner {
+    position: absolute;
+    min-width: 37%;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    top: 35%;
+    left: 15%; 
+    padding: 2rem;
+	color: rgb(0, 0, 0) !important;
+	text-align:left;
+	animation-name: moveInLeft;
+	animation-duration: 2s;
+	animation-delay:1s;
+	animation-timing-function: ease-in;
+}
+@keyframes moveInLeft{
+	0%{
+	  opacity: 0;
+	  transform: translateX(-100px);
+	}
+	80%{
+       transform: translateX(20px);
+	}
+	100%{
+	  opacity: 1;
+	  transform: translateX(0);
+	}
+}
+
+@keyframes moveInRight{
+	0%{
+	  opacity: 0;
+	  transform: translateX(100px);
+	}
+	60%{
+	  transform: rotate(120deg);	
+	}
+	80%{
+       transform: translateX(-20px);
+	}
+	100%{
+	  opacity: 1;
+	  transform: translateX(0);
+	}
+}
+@keyframes moveIn{
+	0%{
+	  opacity: 0;
+	  transform: translateX(150px);
+	}
+
+	60%{
+		transform: rotate(-120deg);	
+	  }
+	80%{
+       transform: translateX(-50px);
+	}
+	100%{
+	  opacity: 1;
+	  transform: translateX(0);
+	}
+}
+#home-heading p {
+    font-size: 30px;
+    font-weight: 100;
+    margin: 0;
+	display: inline-block;
+	animation-name: moveInRight;
+	animation-duration: 2s;
+	animation-delay:1s;
+	animation-timing-function: ease-in;
+    
+}
+#home-text {
+    color: #000;
+    font-size: 19px;
+    font-weight: 100;
+	letter-spacing: 1px;
+	animation-name: moveIn;
+	animation-duration: 2s;
+	animation-delay:1s;
+	animation-timing-function: ease-in;
+    
+}
+
+#home-bg{
+	position: relative;
+}
+
+/* ....buttons... */
+
+.btn-general {
+    color: white;
+    font-family: 'Raleway';
+    border-radius: 8px;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    padding: 10px 20px;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+	background-color: rgb(22, 22, 132);
+	animation-name: buttonDown;
+	animation-duration: 2s;
+	animation-delay:1s;
+}
+@keyframes buttonDown{
+	0%{
+	  transform: translateY(-100px);
+	  transition: .4s linear;
+	}
+	100%{
+		transform:translateY(3);
+		transition: .4s linear;
+	}
+}
+
+
+
+.btn-general:hover{
+	 transform: scale(1);
+	 color:#fff ;
+	 background-color: #444;
+	 box-shadow: 0 0 7rem 6rem;
+}
+
+.fa-long-arrow-right{
+	padding-left:1rem;
+}
+
+
+/* brands section starts */
+.brand-box{
+	text-align: center;
+	padding-top: 4rem;
+	
+}
+.content-box-sm{
+	padding: 0px 0px;
+}
+
+#brands-list{
+	padding: 45px 0 0 0;
+}
+
+.brand{
+	padding: 0 10px;
+	max-width: 150px;
+	margin: 0 auto;
+	line-height: 100px;
+
+}
+
+.brand img{
+	display: inline-block !important;
+   
+}
+
+/* services */
+
+
+
+.ser-one{
+  animation-name:myhead;
+}
+.ser-two:hover{
+	transform: skewY(2deg) skewX(15deg) scale(1.1);
+	text-shadow:.5rem 1rem 2rem;
+	transition: all .2s ease;
+}
+
+
+#services{
+	color: #fff;
+}
+#service-bg{
+	background-image:linear-gradient(rgba(14, 13, 62, 0.8),
+	rgba(5, 3, 46, 0.8)), url(../img/tech/tech-quote.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position:center;
+	
+	opacity: 0.7;
+	
+   
+}
+
+.box-1{
+	background-color: #000 !important;
+	width: 100%;
+	height:100%;
+	opacity: 0.7 !important;
+
+}
+
+.box-2{
+	text-align:left;
+	color: #fff;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+.para{
+	background-color:rgb(44, 44, 150);
+	opacity: 0.6;
+	padding: 0.7rem;
+	border-radius: 15px;
+}
+
+.box-bottom{
+	padding-bottom: 3rem;
+}
+#home-bg-video{
+	width: 348px;
+	border: none;
+}
+
+
+
+/* services end */
+
+/* Productts */
+
+.card{
+ animation-name: prod;
+ animation-duration: 1s;
+ animation-delay: 2s;
+
+}
+
+.myname{
+	animation-name: myname;
+	animation-duration: 1s;
+	animation-delay: all .5s ease;
+	transition:1s ease-in;
+}
+
+@keyframes prod{
+	0%{
+		opacity: 0;
+		transform: translateX(100px);
+	  }
+	  60%{
+		transform: rotate(120deg);	
+	  }
+	  80%{
+		 transform: translateX(-20px);
+	  }
+	  100%{
+		opacity: 1;
+		transform: translateX(0);
+	  }
+}
+
+
+@keyframes myname{
+	0%{
+		opacity: 0;
+		transform: translateX(100px);
+	  }
+	  60%{
+		transform: rotate(120deg);	
+	  }
+	  80%{
+		 transform: translateX(-20px);
+	  }
+	  100%{
+		opacity: 1;
+		transform: translateX(0);
+	  }
+}
+
+
+#products{
+	padding-top: 3rem;
+}
+.product-box{
+	display: flex;
+
+}
+small {
+    margin: 6px 16px;
+}
+.fa-phone{
+	font-size: 2rem;
+}
+/* Productts ends */
+
+/* contacts */
+
+.con-inner{
+	animation-name:me;
+	animation-duration: 1s;
+	animation-delay: 2s;
+   
+}
+
+@keyframes me {
+	0%{
+      transform: translateX(-100);
+	}
+	100%{
+      transform: translateY(20px);
+	}
+}
+#contacts{
+	padding-top: 3rem;
+}
+#bottom-section{
+	padding-top: 3rem;
+	background-color: rgb(22, 22, 132);
+	color: #fff;
+	padding: 2rem 3rem;
+
+}
+.cont-btn{
+	background-color: rgb(27, 6, 78);
+	color: #fff;
+	padding: 0.7rem 1rem;
+	animation-name: justButt;
+	animation-delay: 1s;
+	animation-duration: 1s;
+}
+
+@keyframes justButt{
+	0%{
+		opacity: 0;
+		transform: translateX(100px);
+	  }
+	  60%{
+		transform: rotate(120deg);	
+	  }
+	  80%{
+		 transform: translateX(-20px);
+	  }
+	  100%{
+		opacity: 1;
+		transform: translateX(0);
+	  }
+}
+
+.cont-btn:hover{
+	transform: translateX(-20px);
+	transition: 1s ease;
+	color: thistle;
+}
